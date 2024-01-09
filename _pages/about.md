@@ -16,5 +16,5 @@ Together with Martyna Kasprzyk, we're organising a Edinburgh University-wide wor
 
 Upcoming conferences
 ======
-I'll be attending The Automated Scientist – the future of cell factory engineering, organised by the Novo Nordisk Foundation Science Cluster in Copenhagen during 11-15 March. I'll show some of the work related to optimisation of surfactin production using Bayesian optimisation and metabolomics.
+I'll be attending The Automated Scientist – the future of cell factory engineering, organised by the Novo Nordisk Foundation Science Cluster in Favrholm, 🇩🇰 during 11-15 March. I'll show some of the work related to optimisation of surfactin production using Bayesian optimisation and metabolomics.
 
