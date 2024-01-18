@@ -2,7 +2,7 @@
 title: "Optimisation of surfactin production in Bacillus"
 collection: talks
 type: "Tutorial"
-permalink: /talks/2013-03-01-tutorial-1
+permalink: /talks/02-talk-2
 venue: "Darwin Trust Symposium"
 date: 2023-06-15
 location: "Edinburgh, 🇬🇧"
