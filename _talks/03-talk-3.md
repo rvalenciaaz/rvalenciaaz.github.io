@@ -7,4 +7,4 @@ venue: "AI, Engineering Biology & Beyond"
 date: 2023-03-14
 location: "Edinburgh, 🇬🇧"
 ---
-For more information, [click here] (https://homepages.inf.ed.ac.uk/doyarzun/turing-workshop/)
+For more information, [click here](https://homepages.inf.ed.ac.uk/doyarzun/turing-workshop/)
