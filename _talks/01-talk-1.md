@@ -7,3 +7,4 @@ venue: "Annual Conference of the Microbiology Society"
 date: 2014-04-10
 location: "Edinburgh, 🇬🇧"
 ---
+For more information, [click here](https://microbiologysociety.org/event/annual-conference/annual-conference-2024.html)
