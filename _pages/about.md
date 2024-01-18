@@ -16,7 +16,7 @@ Together with Martyna Kasprzyk, we're organising a Edinburgh University-wide wor
 
 Upcoming conferences
 ======
-I'll be attending The Automated Scientist – the future of cell factory engineering, organised by the Novo Nordisk Foundation Science Cluster in Favrholm, 🇩🇰 during 11-15 March 2024. I'll show some of the work related to optimisation of surfactin production using Bayesian optimisation and metabolomics. [https://sciencecluster.dk/event/6966/] (Click here for more)
+I'll be attending The Automated Scientist – the future of cell factory engineering, organised by the Novo Nordisk Foundation Science Cluster in Favrholm, 🇩🇰 during 11-15 March 2024. I'll show some of the work related to optimisation of surfactin production using Bayesian optimisation and metabolomics. [Click here for more info](https://sciencecluster.dk/event/6966/)
 
-I'm happy to announce that my abstract was accepted for an Offered Talk at the Annual Conference of the Microbiology Society, Edinburgh 🇬🇧. The talk will be part of the Microbial Physiology, Metabolism and Molecular Biology forum on 10 April 2024.
+I'm happy to announce that my abstract was accepted for an Offered Talk at the Annual Conference of the Microbiology Society, Edinburgh 🇬🇧. The talk will be part of the Microbial Physiology, Metabolism and Molecular Biology forum on 10 April 2024. [Click here for more info](https://microbiologysociety.org/event/annual-conference/annual-conference-2024.html)
 
