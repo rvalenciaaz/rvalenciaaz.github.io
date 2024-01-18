@@ -1,7 +1,7 @@
 ---
 title: "A metabolomic perspective on bioprocess optimisation"
 collection: talks
-type: ""
+type: "Talk"
 permalink: /talks/04-talk-4
 venue: "V Latin American Metabolic Profiling Society (LAMPS) Network Meeting"
 date: 2022-11-03
