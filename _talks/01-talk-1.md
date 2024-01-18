@@ -1,8 +1,8 @@
 ---
 title: "(Accepted Talk) Exploring metabolic trade-offs in Bacillus surfactin production"
 collection: talks
-type: "Talk"
-permalink: /talks/2012-03-01-talk-1
+type: ""
+permalink: /talks/01-talk-1
 venue: "Annual Conference of the Microbiology Society"
 date: 2014-04-10
 location: "Edinburgh, 🇬🇧"
