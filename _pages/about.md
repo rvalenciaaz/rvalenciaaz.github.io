@@ -18,5 +18,5 @@ Upcoming conferences
 ======
 I'll be attending The Automated Scientist – the future of cell factory engineering, organised by the Novo Nordisk Foundation Science Cluster in Favrholm, 🇩🇰 during 11-15 March 2024. I'll show some of the work related to optimisation of surfactin production using Bayesian optimisation and metabolomics.
 
-I'm happy to announce that my abstract was accepted for an Offered Talk at Annual Conference of the Microbiology Society, Edinburgh 🇬🇧. The talk will be part of the Microbial Physiology, Metabolism and Molecular Biology forum on 10 April 2024.
+I'm happy to announce that my abstract was accepted for an Offered Talk at the Annual Conference of the Microbiology Society, Edinburgh 🇬🇧. The talk will be part of the Microbial Physiology, Metabolism and Molecular Biology forum on 10 April 2024.
 
