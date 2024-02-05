@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm Ricardo Valencia Albornoz, last year PhD student at the IQB3, School of Biological Sciences, University of Edinburgh, 🇬🇧. My current research focus on working towards an automated biochemist by combining AI/ML for iterative experimentation, metabolomics, robotics and automation. Before my PhD, I was a research assistant at the Universidad Técnica Federico Santa María in Valparaíso, Chile, helping in general bioinformatics, bacterial genomics and natural product discovery in the phylum Actinomycetota. I got my (6-year) bachelor degree at the same university on the topic of Environmental Engineering. My home town is Villa Alemana, 🇨🇱. 
+I'm Ricardo Valencia Albornoz, last year PhD student at the IQB3, School of Biological Sciences, University of Edinburgh, 🇬🇧. My current research focus on working towards an automated biochemist by combining AI/ML for iterative experimentation, metabolomics, robotics and automation. My supervisors are [Karl Burgess](https://burgess.bio.ed.ac.uk/) and [Diego Oyarzun](https://homepages.inf.ed.ac.uk/doyarzun/). Before my PhD, I was a research assistant at the Universidad Técnica Federico Santa María in Valparaíso, Chile, helping in general bioinformatics, bacterial genomics and natural product discovery in the phylum Actinomycetota. I got my (6-year) bachelor degree at the same university on the topic of Environmental Engineering. My home town is Villa Alemana, 🇨🇱. 
 
 Recent news
 ======
