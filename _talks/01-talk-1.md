@@ -1,5 +1,5 @@
 ---
-title: "(Accepted Talk) Exploring metabolic trade-offs in Bacillus surfactin production"
+title: "Exploring metabolic trade-offs in Bacillus surfactin production"
 collection: talks
 type: "Talk"
 permalink: /talks/01-talk-1
