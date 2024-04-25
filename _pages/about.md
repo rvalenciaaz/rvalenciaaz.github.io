@@ -16,9 +16,7 @@ Recent news
 ======
 Together with Martyna Kasprzyk, we're organising a Edinburgh University-wide workshop on Opentrons robot usage, covering case studies and tutorials. If you're interested in the workshop, please write to r.g.valencia-albornoz@sms.ed.ac.uk or m.kasprzyk@sms.ed.ac.uk, telling us your experience (or curiosity) with Opentrons robots, and what would you like to learn in the sessions. Programme will be announced soon.
 
+I attended on Monday 22 of May the Paris OECD Global Forum on Technology: Building Biofutures. Great room for the discussion of the impacts of synthetic biology in national economies, and how platform investment and bio security training are essential to deliver solutions faster. Chile 🇨🇱 needs a synthetic biology roadmap if it wants to be a leader in the global market.
+
 Upcoming conferences
 ======
-I'll be attending The Automated Scientist – the future of cell factory engineering, organised by the Novo Nordisk Foundation Science Cluster in Favrholm, 🇩🇰 during 11-15 March 2024. I'll show some of the work related to optimisation of surfactin production using Bayesian optimisation and metabolomics. [Click here for more info](https://sciencecluster.dk/event/6966/)
-
-I'm happy to announce that my abstract was accepted for an Offered Talk at the Annual Conference of the Microbiology Society, Edinburgh 🇬🇧. The talk will be part of the Microbial Physiology, Metabolism and Molecular Biology forum on 10 April 2024. [Click here for more info](https://microbiologysociety.org/event/annual-conference/annual-conference-2024.html)
-
