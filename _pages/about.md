@@ -15,7 +15,7 @@ I'm Ricardo Valencia Albornoz, last year PhD student at the IQB3, School of Biol
 Recent news
 ======
 
-I participated in the Cambridge Ellis Unit Summer School in Probabilistic Machine Learning from 15 July to 19 July 2024, organised by the Department of Computer Science at the University of Cambridge. 5 days packed with broad range of topics including basic probablistic models, good practices at modelling, reinforcement learning, transformer theory, causal modelling, Monte-Carlo methods and more. Many thanks to the amazing organizers, speakers and the summer school attendants showing new ideas in probabilistic learning. Some of the slides from the sessions are [here](https://www.ellis.eng.cam.ac.uk/summer-school/)
+I participated in the Cambridge Ellis Unit Summer School in Probabilistic Machine Learning from 15 July to 19 July 2024, organised by the Department of Computer Science at the University of Cambridge. 5 days packed with broad range of topics including basic probablistic models, good practices at modelling, reinforcement learning, transformer theory, causal modelling, Monte-Carlo methods and more. Many thanks to the amazing organizers, speakers and the summer school attendants, which were kind to share new ideas in probabilistic learning. Some of the slides from the sessions are [here](https://www.ellis.eng.cam.ac.uk/summer-school/).
 
 Together with Martyna Kasprzyk, we're organising a Edinburgh University-wide workshop on Opentrons robot usage, covering case studies and tutorials. If you're interested in the workshop, please write to r.g.valencia-albornoz@sms.ed.ac.uk or m.kasprzyk@sms.ed.ac.uk, telling us your experience (or curiosity) with Opentrons robots, and what would you like to learn in the sessions. Programme will be announced soon.
 
@@ -23,3 +23,5 @@ I attended on Monday 22 of May 2024 the Paris OECD Global Forum on Technology: B
 
 Upcoming conferences
 ======
+
+I will attend back to back conferences in AI for chemistry in September, showing the results from our [hackathon project](https://ac-bo-hackathon.github.io/projects/project-16-bope-gpt/). Check the [Github repo here](https://github.com/AC-BO-Hackathon/BOPE-GPT). The first will be the [Faraday Discussion on Data-driven discovery in the chemical sciences](https://www.rsc.org/events/detail/76887/data-driven-discovery-in-the-chemical-sciences-faraday-discussion), at Trinity College, Oxford from the 10 to the 12 of September 2024. Then, I will travel to Cambridge for the [7th RSC-CICAG/RSC-BMCS Artificial Intelligence in Chemistry 2024](https://www.rscbmcs.org/events/aichem7/) at Churchill College from the 16th to the 18th of September 2024.
