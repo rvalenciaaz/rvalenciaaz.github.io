@@ -15,7 +15,8 @@ I'm Ricardo Valencia Albornoz, last year PhD student at the IQB3, School of Biol
 Recent news
 ======
 
-I participated in the Cambridge Ellis Unit Summer School in Probabilistic Machine Learning from 15 July to 19 July 2024, organised by the Department of Computer Science at the University of Cambridge. 5 days packed with a broad range of topics including basic probablistic models, good practices at modelling, reinforcement learning, transformer theory, causal modelling, Monte-Carlo methods and more. Many thanks to the amazing organizers, speakers and the summer school attendants, who were kind to share new ideas in probabilistic learning. Some of the slides from the sessions are [here](https://www.ellis.eng.cam.ac.uk/summer-school/).<br/><img src='/images/IMG_8499.jpg'>
+I participated in the Cambridge Ellis Unit Summer School in Probabilistic Machine Learning from 15 July to 19 July 2024, organised by the Department of Computer Science at the University of Cambridge. 5 days packed with a broad range of topics including basic probablistic models, good practices at modelling, reinforcement learning, transformer theory, causal modelling, Monte-Carlo methods and more. Many thanks to the amazing organizers, speakers and the summer school attendants, who were kind to share new ideas in probabilistic learning. Some of the slides from the sessions are [here](https://www.ellis.eng.cam.ac.uk/summer-school/).<img src='/images/IMG_8499.jpg' width='300' height='200'>
+
 
 Together with Martyna Kasprzyk, we're organising a Edinburgh University-wide workshop on Opentrons robot usage, covering case studies and tutorials. If you're interested in the workshop, please write to r.g.valencia-albornoz@sms.ed.ac.uk or m.kasprzyk@sms.ed.ac.uk, telling us your experience (or curiosity) with Opentrons robots, and what would you like to learn in the sessions. Programme will be announced soon.
 
