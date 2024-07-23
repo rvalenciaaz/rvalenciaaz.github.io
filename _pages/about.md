@@ -14,9 +14,12 @@ I'm Ricardo Valencia Albornoz, last year PhD student at the IQB3, School of Biol
 
 Recent news
 ======
+
+I participated in the Cambridge Ellis Unit Summer School in Probabilistic Machine Learning from 15 July to 19 July 2024, organised by the Department of Computer Science at the University of Cambridge. 5 days packed with broad range of topics including basic probablistic models, good practices at modelling, reinforcement learning, transformer theory, causal modelling, Monte-Carlo methods and more. Many thanks to the amazing organizers, speakers and the summer school attendants showing new ideas in probabilistic learning. Some of the slides from the sessions are [here](https://www.ellis.eng.cam.ac.uk/summer-school/)
+
 Together with Martyna Kasprzyk, we're organising a Edinburgh University-wide workshop on Opentrons robot usage, covering case studies and tutorials. If you're interested in the workshop, please write to r.g.valencia-albornoz@sms.ed.ac.uk or m.kasprzyk@sms.ed.ac.uk, telling us your experience (or curiosity) with Opentrons robots, and what would you like to learn in the sessions. Programme will be announced soon.
 
-I attended on Monday 22 of May the Paris OECD Global Forum on Technology: Building Biofutures. Great room for the discussion of the impacts of synthetic biology in national economies, and how platform investment and bio security training are essential to deliver solutions faster. Chile 🇨🇱 needs a synthetic biology roadmap if it wants to be a leader in the global market.
+I attended on Monday 22 of May 2024 the Paris OECD Global Forum on Technology: Building Biofutures. Great room for the discussion of the impacts of synthetic biology in national economies, and how platform investment and bio security training are essential to deliver solutions faster. Chile 🇨🇱 needs a synthetic biology roadmap if it wants to be a leader in the global market.
 
 Upcoming conferences
 ======
