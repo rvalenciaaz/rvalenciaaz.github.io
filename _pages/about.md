@@ -17,13 +17,12 @@ Even before, I was a research assistant at the Universidad Técnica Federico San
 Recent news
 ======
 
+I've participated in the Nucleate's PlantHack Hackathon organized by Nucleate UK and ARIA, and our team, SpottEarly, won the first place on the AI Track!.
+
 I've attended the Faraday Discussion on Data-driven discovery in the chemical sciences at Trinity College, Oxford (10-12 September 2024). The conference was organised by Fernanda Duarte (Oxford) and Volker Deringer (Oxford), who did a tremendous job over the event. Loved the format and how the discussions organise around the preprints. Very energising inaugural talk by Alán Aspuru-Guzik on the frontiers of automation for chemistry. Great talks and posters around and nice final talk from Andy Cooper, showing a hypothesis-driven Bayesian optimisation pipeline (in picture). More information [here](https://www.rsc.org/events/detail/76887/data-driven-discovery-in-the-chemical-sciences-faraday-discussion). <br><img src='/images/IMG_8687.jpg' width='200' height='280'>
-
-I participated in the Cambridge Ellis Unit Summer School in Probabilistic Machine Learning from 15 July to 19 July 2024, organised by the Department of Computer Science at the University of Cambridge. 5 days packed with a broad range of topics including basic probablistic models, good practices at modelling, reinforcement learning, transformer theory, causal modelling, Monte-Carlo methods and more. Many thanks to the amazing organizers, speakers and the summer school attendants, who were kind to share new ideas in probabilistic learning. Some of the slides from the sessions are [here](https://www.ellis.eng.cam.ac.uk/summer-school/).<br><img src='/images/IMG_8499.jpg' width='200' height='280'>
-
-I attended on Monday 22 of May 2024 the Paris OECD Global Forum on Technology: Building Biofutures. Great room for the discussion of the impacts of synthetic biology in national economies, and how platform investment and bio security training are essential to deliver solutions faster. Chile 🇨🇱 needs a synthetic biology roadmap if it wants to be a leader in the global market.
 
 Upcoming conferences
 ======
 
+I'll be attending the Uncovering Hidden Biology mini-symposium at Worcester College, Oxford on the 18th of September.
 
