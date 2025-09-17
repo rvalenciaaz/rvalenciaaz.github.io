@@ -26,5 +26,5 @@ I've attended the Faraday Discussion on Data-driven discovery in the chemical sc
 Upcoming conferences
 ======
 
-I'll be attending the Uncovering Hidden Biology mini-symposium at Worcester College, Oxford on the 18th of September.
+I'll be attending the Uncovering Hidden Biology mini-symposium at Worcester College, Oxford on the 18th of September. [More details here]{https://www.uncoverhiddenbio.com/}
 
