@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Ricardo, and I'm a Postdoctoral Research Scientist at the Earlham Institute, 🇬🇧. My current research focuses on AI and mathematical modelling of the microbiome and metabolism, as part of the Chris Quince's group. You can see my profile [here](https://www.earlham.ac.uk/profile/ricardo-valencia-albornoz).
+Hi, I'm Ricardo, and I'm a Postdoctoral Research Scientist at the Earlham Institute, 🇬🇧. My current research focuses on AI and mathematical modelling of microbiome and metabolism, as part of the Chris Quince's group. You can see my profile [here](https://www.earlham.ac.uk/profile/ricardo-valencia-albornoz).
 
 Before my postdoc, I completed my PhD at the IQB3, School of Biological Sciences, University of Edinburgh, 🇬🇧. My PhD project involved building a prototype of an automated biochemist by combining AI/ML for iterative experimentation, metabolomics, robotics, and automation. My supervisors were [Karl Burgess](https://burgess.bio.ed.ac.uk/) and [Diego Oyarzún](https://homepages.inf.ed.ac.uk/doyarzun/). 
 
