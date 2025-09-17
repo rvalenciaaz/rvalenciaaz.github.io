@@ -17,7 +17,7 @@ Even before, I was a research assistant at the Universidad Técnica Federico San
 Recent news
 ======
 
-I've participated in the Nucleate's PlantHack Hackathon organized by Nucleate UK and ARIA, and our team, SpottEarly, won the first place on the AI Track!. <br><img src='/images/IMG_8687.jpg' width='200' height='280'>
+I've participated in the Nucleate's PlantHack Hackathon organized by Nucleate UK and ARIA, and our team, SpottEarly, won the first place on the AI Track!. <br><img src='/images/IMG_0020.jpg' width='200' height='280'>
 
 Upcoming conferences
 
