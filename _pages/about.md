@@ -19,8 +19,6 @@ Recent news
 
 I've participated in the Nucleate's PlantHack Hackathon organized by Nucleate UK and ARIA, and our team, SpottEarly, won the first place on the AI Track!. <br><img src='/images/IMG_0020.JPG' width='200' height='280'>
 
-Upcoming conferences
-
 I've attended the Faraday Discussion on Data-driven discovery in the chemical sciences at Trinity College, Oxford (10-12 September 2024). The conference was organised by Fernanda Duarte (Oxford) and Volker Deringer (Oxford), who did a tremendous job over the event. Loved the format and how the discussions organise around the preprints. Very energising inaugural talk by Alán Aspuru-Guzik on the frontiers of automation for chemistry. Great talks and posters around and nice final talk from Andy Cooper, showing a hypothesis-driven Bayesian optimisation pipeline (in picture). More information [here](https://www.rsc.org/events/detail/76887/data-driven-discovery-in-the-chemical-sciences-faraday-discussion). <br><img src='/images/IMG_8687.jpg' width='200' height='280'>
 
 Upcoming conferences
