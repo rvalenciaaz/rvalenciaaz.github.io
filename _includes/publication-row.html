@@ -1,0 +1,6 @@
+<article class="publication-row">
+  <p class="article-meta">{{ include.paper.date | date: '%Y' }} · {{ include.paper.venue }}{% if include.paper.type %} · {{ include.paper.type }}{% endif %}</p>
+  <h2><a href="{{ include.paper.url | relative_url }}">{{ include.paper.title }}</a></h2>
+  <p>{{ include.paper.excerpt }}</p>
+  <a class="text-link" href="{{ include.paper.paperurl }}">View publication <span aria-hidden="true">↗</span></a>
+</article>

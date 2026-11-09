@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="article-page">
+  <header class="article-heading">
+    {% case page.collection %}
+      {% when 'posts' %}<a class="back-link" href="{{ '/year-archive/' | relative_url }}">← Blog</a>
+      {% when 'publications' %}<a class="back-link" href="{{ '/publications/' | relative_url }}">← Publications</a>
+      {% when 'portfolio' %}<a class="back-link" href="{{ '/portfolio/' | relative_url }}">← Portfolio</a>
+      {% when 'talks' %}<a class="back-link" href="{{ '/talks/' | relative_url }}">← Talks</a>
+      {% else %}<a class="back-link" href="{{ '/' | relative_url }}">← About me</a>
+    {% endcase %}
+    <h1>{{ page.title }}</h1>
+    {% if page.date and page.collection != 'portfolio' %}<p class="article-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{% if page.date_label %}{{ page.date_label }}{% else %}{{ page.date | date: '%-d %B %Y' }}{% endif %}</time>{% if page.venue %} · {{ page.venue }}{% endif %}{% if page.location %} · {{ page.location }}{% endif %}{% if page.last_modified_at %} · Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%-d %B %Y' }}</time>{% endif %}</p>{% endif %}
+    {% if page.collection == 'portfolio' %}<p class="page-intro">{{ page.excerpt }}</p>{% endif %}
+  </header>
+  <div class="prose">
+    {% assign body = content | strip %}
+    {% if body == '' and page.excerpt %}<p>{{ page.excerpt }}</p>{% else %}{{ content }}{% endif %}
+    {% if page.paperurl %}<p><a class="button" href="{{ page.paperurl }}">View publication <span aria-hidden="true">↗</span></a></p>{% endif %}
+    {% if page.citation %}<h2>Citation</h2><p>{{ page.citation }}</p>{% endif %}
+    {% if page.link %}<p><a class="text-link" href="{{ page.link }}">Find out more <span aria-hidden="true">↗</span></a></p>{% endif %}
+  </div>
+  {% if page.collection == 'posts' %}<div class="article-end"><a href="{{ '/year-archive/' | relative_url }}">← Back to all posts</a></div>{% endif %}
+</article>

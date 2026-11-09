@@ -1,0 +1,6 @@
+<article class="project-card">
+  <a class="project-image" href="{{ include.project.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ include.project.image | relative_url }}" srcset="{{ include.project.image | replace: '.webp', '-640.webp' | relative_url }} 640w, {{ include.project.image | replace: '.webp', '-1000.webp' | relative_url }} 1000w, {{ include.project.image | relative_url }} 1400w" sizes="(max-width:650px) calc(100vw - 36px), (max-width:850px) calc(100vw - 292px), (max-width:1150px) calc(100vw - 308px), (max-width:1360px) calc(50vw - 188px), 492px" alt="" width="1400" height="1050" decoding="async" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}></a>
+  <p class="article-meta">{{ include.project.topic }}</p>
+  <h2><a href="{{ include.project.url | relative_url }}">{{ include.project.title }}</a></h2>
+  <p>{{ include.project.excerpt }}</p>
+</article>

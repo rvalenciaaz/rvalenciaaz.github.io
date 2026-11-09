@@ -1,0 +1,10 @@
+---
+layout: archive
+title: Portfolio
+permalink: /portfolio/
+section: projects
+intro: Robotics, open-source hardware and tools I’ve built for automated biology.
+excerpt: Hands-on biology projects by Ricardo Valencia Albornoz, from a compact robotic arm to automated microbial experiments.
+---
+<div class="project-grid">{% for project in site.portfolio %}{% include project-card.html project=project %}{% endfor %}</div>
+<p class="archive-end">Each project includes the design credits and practical details. You can also find my code on <a href="https://github.com/{{ site.author.github }}">GitHub</a>.</p>

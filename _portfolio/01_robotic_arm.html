@@ -1,0 +1,19 @@
+---
+title: "The robotic arm is alive!"
+excerpt: "A compact robotic arm for moving tubes and opening bioreactor lids inside an Opentrons OT-2."
+collection: portfolio
+image: /assets/images/robotic-arm.webp
+topic: "Robotics"
+---
+<p><a href="https://youtu.be/U1p1gtquFiM">Watch the robot in action</a>.</p>
+
+<p>Opentrons is a flexible platform, but operations such as moving tubes and opening ChiBio reactor lids need an extra arm. I built this one to reach across the deck while remaining small enough to fit inside the Opentrons OT-2.</p>
+
+<figure>
+  <img src="/assets/images/robotic-arm.webp" srcset="/assets/images/robotic-arm-640.webp 640w, /assets/images/robotic-arm-1000.webp 1000w, /assets/images/robotic-arm.webp 1400w" sizes="(max-width:650px) calc(100vw - 36px), (max-width:850px) calc(100vw - 292px), (max-width:1150px) calc(100vw - 308px), (max-width:1168px) calc(100vw - 348px), 820px" alt="A servo-driven robotic arm assembled on a workbench." decoding="async" width="1400" height="1050">
+  <figcaption>A helping hand for automated experiments.</figcaption>
+</figure>
+
+<p>The design is by Kelton Serra, whose YouTube channel is <a href="https://www.youtube.com/@buildsomestuff">Build Some Stuff</a>. He kindly shares the <a href="https://www.thingiverse.com/thing:6313449">3D models</a>, an <a href="https://www.youtube.com/watch?v=5toNqaGsGYs">overview video</a>, and two assembly tutorials: <a href="https://www.youtube.com/watch?v=AIsVlgopqJc">part one</a> and <a href="https://www.youtube.com/watch?v=OiQKw0lZ5Rw">part two</a>.</p>
+
+<p>The gripper uses a microservo, the shoulder joint uses a 20 kg servo to support the arm's weight, and the wrist, elbow and base use RC servos. Everything connects to an Arduino-compatible servo controller powered by an adjustable power adapter. An Arduino Uno links the controller to the input potentiometers, with a small script aligning their angle readings to the servo shaft angles.</p>

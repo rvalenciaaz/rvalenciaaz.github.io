@@ -1,0 +1,21 @@
+<aside class="profile" aria-label="About Ricardo">
+  {% if page.url == '/' %}
+  <div class="profile-card">
+    <picture class="profile-photo">
+      <source media="(max-width:650px)" srcset="{{ '/assets/images/profilepic-mobile.webp' | relative_url }}">
+      <img src="{{ '/assets/images/profilepic-desktop.webp' | relative_url }}" alt="Ricardo Valencia Albornoz" width="600" height="391" fetchpriority="high">
+    </picture>
+    <div class="profile-caption">
+      <p class="profile-role">{{ site.author.role }}</p>
+      <p class="profile-affiliation"><a href="{{ site.author.employer_url }}">{{ site.author.employer }}</a><br>{{ site.author.location }}</p>
+    </div>
+  </div>
+  {% endif %}
+  <ul class="profile-links">
+    <li><a href="{{ site.author.linkedin }}">LinkedIn</a></li>
+    <li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
+    <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+    <li><a href="{{ site.author.orcid }}">ORCID</a></li>
+    <li><a href="https://bsky.app/profile/rvalenciaaz.bsky.social">Bluesky</a></li>
+  </ul>
+</aside>

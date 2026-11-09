@@ -1,0 +1,86 @@
+title: Ricardo Valencia Albornoz
+name: Ricardo Valencia Albornoz
+description: Ricardo Valencia Albornoz, Computational Genomics Scientist at the Ellison Institute of Technology Oxford. Genomics, machine learning and automated biology.
+url: https://rvalenciaaz.github.io
+baseurl: ""
+locale: en-GB
+timezone: Europe/London
+repository: rvalenciaaz/rvalenciaaz.github.io
+theme: null
+
+author:
+  name: Ricardo Valencia Albornoz
+  role: Computational Genomics Scientist
+  employer: Ellison Institute of Technology
+  employer_url: https://eit.org/pathogen-program
+  location: Oxford, UK
+  linkedin: https://www.linkedin.com/in/rvalenciaaz/
+  github: rvalenciaaz
+  googlescholar: https://scholar.google.com/citations?user=H0e8P1UAAAAJ&hl=en
+  orcid: https://orcid.org/0000-0003-0306-1530
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: /:categories/:title/
+excerpt_separator: "\n\n"
+include:
+  - _pages
+exclude:
+  - vendor
+  - node_modules
+  - .bundle
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
+  - bin
+  - tests
+  - previews
+
+collections:
+  publications:
+    output: true
+    permalink: /publication/:path/
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+  - scope:
+      path: ""
+      type: posts
+    values:
+      section: notes
+  - scope:
+      path: ""
+      type: publications
+    values:
+      section: research
+  - scope:
+      path: ""
+      type: talks
+    values:
+      section: talks
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      section: projects
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from

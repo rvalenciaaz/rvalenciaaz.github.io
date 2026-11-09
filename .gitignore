@@ -1,0 +1,7 @@
+_site/
+.bundle/
+/vendor/
+node_modules/
+.jekyll-metadata
+.sass-cache/
+previews/

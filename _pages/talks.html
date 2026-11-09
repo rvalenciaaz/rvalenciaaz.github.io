@@ -1,0 +1,9 @@
+---
+layout: archive
+title: Talks & presentations
+permalink: /talks/
+section: talks
+intro: Conference talks and posters on active learning, metabolomics and automated experimentation.
+excerpt: Talks and posters by Ricardo Valencia Albornoz on active learning, metabolomics and automated experimentation.
+---
+<div class="talk-list">{% assign talks = site.talks | sort: 'date' | reverse %}{% for talk in talks %}<article class="talk-row"><p class="article-meta">{% if talk.date_label %}{{ talk.date_label }}{% else %}{{ talk.date | date: '%-d %B %Y' }}{% endif %} · {{ talk.type }}</p><h2><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h2><p>{{ talk.venue }} · {{ talk.location }}</p></article>{% endfor %}</div>

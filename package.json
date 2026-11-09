@@ -1,0 +1,11 @@
+{
+  "name": "ricardo-valencia-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ricardo Valencia Albornoz’s personal research website",
+  "scripts": {
+    "dev": "sh bin/site serve --host 127.0.0.1 --config _config.yml,_config.dev.yml",
+    "build": "JEKYLL_ENV=production sh bin/site build",
+    "check": "python3 tests/check_site.py && python3 tests/check_security.py && node tests/check_math.cjs"
+  }
+}

@@ -1,0 +1,17 @@
+---
+title: "A basic configuration for automation in biology using Opentrons and ChiBio"
+excerpt: "Connecting liquid handling, miniature bioreactors and Python to run iterative culture experiments."
+collection: portfolio
+image: /assets/images/automated-lab.webp
+topic: "Lab automation"
+---
+<p>Opentrons and ChiBio work well together for automating protocols involving starter cultures. This configuration puts four miniature bioreactors inside the deck, leaving space for tubes, plates and tips.</p>
+
+<figure>
+  <img src="/assets/images/automated-lab.webp" srcset="/assets/images/automated-lab-640.webp 640w, /assets/images/automated-lab-1000.webp 1000w, /assets/images/automated-lab.webp 1400w" sizes="(max-width:650px) calc(100vw - 36px), (max-width:850px) calc(100vw - 292px), (max-width:1150px) calc(100vw - 308px), (max-width:1168px) calc(100vw - 348px), 820px" alt="Four ChiBio miniature bioreactors installed inside an Opentrons liquid-handling robot." decoding="async" width="1400" height="1050">
+  <figcaption>Liquid handling and culture control on the same deck.</figcaption>
+</figure>
+
+<p>The reactors grow starter cultures in LB medium, which are transferred to a plate where each well contains a different culture medium composition. The results inform the next set of combinations and generate scripts to control the Opentrons robot and ChiBio in the following iteration.</p>
+
+<p>Python coordinates the process, including <a href="https://github.com/rvalenciaaz/3D_models_bio_automation/tree/main">alerts for system crashes</a>. The experiments take place inside the robot's UV-disinfected deck.</p>

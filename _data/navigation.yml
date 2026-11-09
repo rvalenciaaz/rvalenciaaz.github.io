@@ -1,0 +1,16 @@
+main:
+  - title: About me
+    url: /
+    section: about
+  - title: Publications
+    url: /publications/
+    section: research
+  - title: Talks
+    url: /talks/
+    section: talks
+  - title: Portfolio
+    url: /portfolio/
+    section: projects
+  - title: Blog
+    url: /year-archive/
+    section: notes
