@@ -84,4 +84,3 @@ defaults:
 
 plugins:
   - jekyll-sitemap
-  - jekyll-redirect-from

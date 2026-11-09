@@ -4,7 +4,6 @@ layout: default
 <article class="article-page">
   <header class="article-heading">
     {% case page.collection %}
-      {% when 'posts' %}<a class="back-link" href="{{ '/year-archive/' | relative_url }}">← Blog</a>
       {% when 'publications' %}<a class="back-link" href="{{ '/publications/' | relative_url }}">← Publications</a>
       {% when 'portfolio' %}<a class="back-link" href="{{ '/portfolio/' | relative_url }}">← Portfolio</a>
       {% when 'talks' %}<a class="back-link" href="{{ '/talks/' | relative_url }}">← Talks</a>
@@ -21,5 +20,5 @@ layout: default
     {% if page.citation %}<h2>Citation</h2><p>{{ page.citation }}</p>{% endif %}
     {% if page.link %}<p><a class="text-link" href="{{ page.link }}">Find out more <span aria-hidden="true">↗</span></a></p>{% endif %}
   </div>
-  {% if page.collection == 'posts' %}<div class="article-end"><a href="{{ '/year-archive/' | relative_url }}">← Back to all posts</a></div>{% endif %}
+  {% if page.collection == 'posts' %}<div class="article-end"><a href="{{ '/' | relative_url }}">← Back to the homepage</a></div>{% endif %}
 </article>

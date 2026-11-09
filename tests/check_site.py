@@ -16,7 +16,6 @@ class Page(HTMLParser):
         self.anchor_links = set()
         self.h1 = 0
         self.main = 0
-        self.redirect = False
         self.title = False
         self.lang = False
         self.portraits = 0
@@ -33,7 +32,7 @@ class Page(HTMLParser):
         self.main += tag == "main"
         self.title |= tag == "title"
         self.lang |= tag == "html" and attrs.get("lang") == "en"
-        self.redirect |= tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh"
+        assert not (tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh"), f"Unexpected redirect in {self.path}"
         if tag == "a" and attrs.get("aria-current") == "page":
             self.current_navigation.append(attrs.get("href"))
         if tag == "a" and attrs.get("href"):
@@ -71,12 +70,11 @@ def resolve(url, source):
 
 assert ROOT.exists(), "Build the site first: npm run build"
 required = ["index.html", "publications/index.html", "portfolio/index.html",
-            "talks/index.html", "year-archive/index.html", "sitemap/index.html", "cv/index.html",
-            "404.html", "sitemap.xml"]
+            "talks/index.html", "404.html", "sitemap.xml"]
 for path in required:
     assert (ROOT / path).is_file(), f"Missing required page: {path}"
 assert not (ROOT / "terms/index.html").exists(), "Removed Privacy & credits page is still published"
-for path in ("files", "images", "markdown_generator", "talkmap", "assets/js/plugins", "assets/js/math.js", "assets/vendor/katex", "feed.xml"):
+for path in ("files", "images", "markdown_generator", "talkmap", "assets/js/plugins", "assets/js/math.js", "assets/vendor/katex", "feed.xml", "redirects.json"):
     assert not (ROOT / path).exists(), f"Obsolete content is still published: {path}"
 assert not any(path.suffix.lower() == ".pdf" for path in ROOT.rglob("*")), "PDF files must not be published"
 assert {path.name for path in (ROOT / "assets/css").iterdir()} == {"site.css"}, "Unused stylesheets are still published"
@@ -92,16 +90,15 @@ for path in ROOT.rglob("*.html"):
     pages[path] = page
     assert page.portraits == int(path == ROOT / "index.html"), f"Portrait must appear only on the homepage: {path}"
     assert page.title, f"Missing page title in {path}"
-    if not page.redirect:
-        assert page.lang, f"Missing page language in {path}"
-        assert page.h1 == 1 and page.main == 1, f"Missing/duplicate landmark in {path}"
-        assert "site-nav" in page.ids, f"Missing site navigation in {path}"
-        expected_navigation = {
-            "index.html": "/", "publications": "/publications/",
-            "publication": "/publications/", "talks": "/talks/",
-            "portfolio": "/portfolio/"
-        }.get(path.relative_to(ROOT).parts[0])
-        assert page.current_navigation == ([expected_navigation] if expected_navigation else []), f"Wrong current navigation in {path}"
+    assert page.lang, f"Missing page language in {path}"
+    assert page.h1 == 1 and page.main == 1, f"Missing/duplicate landmark in {path}"
+    assert "site-nav" in page.ids, f"Missing site navigation in {path}"
+    expected_navigation = {
+        "index.html": "/", "publications": "/publications/",
+        "publication": "/publications/", "talks": "/talks/",
+        "portfolio": "/portfolio/"
+    }.get(path.relative_to(ROOT).parts[0])
+    assert page.current_navigation == ([expected_navigation] if expected_navigation else []), f"Wrong current navigation in {path}"
 
 checked_links = 0
 referenced_files = set()
@@ -133,8 +130,8 @@ while pending:
     for target in page_targets[pending.pop()] - reachable:
         reachable.add(target)
         pending.append(target)
-orphans = [str(path.relative_to(ROOT)) for path, page in pages.items()
-           if not page.redirect and path != ROOT / "404.html" and path not in reachable]
+orphans = [str(path.relative_to(ROOT)) for path in pages
+           if path != ROOT / "404.html" and path not in reachable]
 assert not orphans, f"Unlinked content pages: {sorted(orphans)}"
 unused_assets = [str(path.relative_to(ROOT)) for path in (ROOT / "assets").rglob("*")
                  if path.is_file() and path not in referenced_files
@@ -158,11 +155,7 @@ for project in (ROOT / "portfolio").glob("*/index.html"):
     assert 'class="article-meta"' not in project.read_text(), f"Undated project acquired a build date: {project}"
 for alias in ("cv/index.html", "resume.html", "resume/index.html", "about.html", "about/index.html",
               "notes/index.html", "year-archive/index.html", "sitemap/index.html", "wordpress/blog-posts/index.html"):
-    assert pages[ROOT / alias].redirect, f"Missing historical redirect: {alias}"
-    text = (ROOT / alias).read_text()
-    assert '<link rel="canonical" href="https://rvalenciaaz.github.io/">' in text, f"Retired page must target the homepage: {alias}"
-    assert '0; url=https://rvalenciaaz.github.io/"' in text, f"Retired page must redirect to the homepage: {alias}"
-    assert 'content="noindex"' in text, f"Retired page must not be indexed: {alias}"
+    assert not (ROOT / alias).exists(), f"Retired URL is still published: {alias}"
 for retired in ("/cv/", "/resume/", "/sitemap/", "/year-archive/", "/notes/", "/wordpress/blog-posts/"):
     assert f"https://rvalenciaaz.github.io{retired}" not in (ROOT / "sitemap.xml").read_text(), f"Retired page is still listed: {retired}"
 assert not (ROOT / "posts/2026/06/math-1/index.html").exists(), "Removed theorem post is still published"

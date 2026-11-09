@@ -46,8 +46,6 @@ def check_url(value, resource=False):
 class SecurityPage(HTMLParser):
     def __init__(self, html):
         super().__init__()
-        self.canonical = None
-        self.redirect = None
         self.csp = None
         self.in_head = False
         self.head_started = False
@@ -56,9 +54,6 @@ class SecurityPage(HTMLParser):
         self.resources_started = False
         self.feed(html)
         self.close()
-        if self.redirect is not None:
-            check_url(self.redirect, resource=True)
-            assert self.redirect == self.canonical, "Redirect differs from canonical URL"
 
     def handle_starttag(self, tag, attrs):
         assert not self.in_title, "Markup in the title can conceal an ineffective CSP"
@@ -84,14 +79,10 @@ class SecurityPage(HTMLParser):
         for candidate in attrs.get("srcset", "").split(","):
             if candidate.strip():
                 check_url(candidate.strip().split()[0], resource=True)
-        if tag == "link" and attrs.get("rel") == "canonical":
-            self.canonical = attrs["href"]
         if tag == "meta" and attrs.get("property") == "og:image":
             check_url(attrs["content"], resource=True)
         if tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh":
-            match = re.fullmatch(r"\s*0\s*;\s*url=(.+)\s*", attrs.get("content", ""), re.I)
-            assert match, "Unexpected refresh syntax"
-            self.redirect = match[1]
+            raise AssertionError("Unexpected redirect")
         if tag == "meta" and attrs.get("http-equiv", "").lower() == "content-security-policy":
             assert self.in_head and not self.resources_started, "CSP must precede resources inside the head"
             assert self.csp is None, "Duplicate Content Security Policy"
@@ -125,10 +116,10 @@ def rejected(check, value):
 
 
 SecurityPage('<script src="/assets/js/site.js"></script><a href="https://example.org/">Link</a>')
-SecurityPage('<link rel="canonical" href="https://rvalenciaaz.github.io/"><meta http-equiv="refresh" content="0; URL=https://rvalenciaaz.github.io/">')
 check_css("@font-face{src:url(../fonts/roboto/roboto-normal-latin.woff2)}")
 controls = 0
 for html in (
+    '<link rel="canonical" href="https://rvalenciaaz.github.io/"><meta http-equiv="refresh" content="0; URL=https://rvalenciaaz.github.io/">',
     '<script src="https://example.invalid/payload.js"></script>',
     '<script>alert(1)</script>',
     '<img src="/image.webp" onerror="alert(1)">',
@@ -176,7 +167,7 @@ for path in ROOT.rglob("*"):
     if relative.parts[0] == "assets":
         assert path.suffix in (".css", ".js", ".webp", ".woff2", ".woff", ".ttf", ".txt") or path.name == "LICENSE", f"Unexpected asset type: {relative}"
     else:
-        assert path.suffix == ".html" or str(relative) in ("sitemap.xml", "robots.txt", "redirects.json"), f"Unexpected published file: {relative}"
+        assert path.suffix == ".html" or str(relative) in ("sitemap.xml", "robots.txt"), f"Unexpected published file: {relative}"
     if path.suffix == ".html":
         try:
             page = SecurityPage(path.read_text())
@@ -186,4 +177,4 @@ for path in ROOT.rglob("*"):
         pages += 1
     elif path.suffix == ".css":
         check_css(path.read_text())
-print(f"Passed: {pages} pages, {files} published files, local resource/redirect boundaries and {controls} negative security controls.")
+print(f"Passed: {pages} pages, {files} published files, local resource boundaries, no redirects and {controls} negative security controls.")
