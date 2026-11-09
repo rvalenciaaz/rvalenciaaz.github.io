@@ -125,7 +125,7 @@ def rejected(check, value):
 
 
 SecurityPage('<script src="/assets/js/site.js"></script><a href="https://example.org/">Link</a>')
-SecurityPage('<link rel="canonical" href="https://rvalenciaaz.github.io/cv/"><meta http-equiv="refresh" content="0; URL=https://rvalenciaaz.github.io/cv/">')
+SecurityPage('<link rel="canonical" href="https://rvalenciaaz.github.io/"><meta http-equiv="refresh" content="0; URL=https://rvalenciaaz.github.io/">')
 check_css("@font-face{src:url(../fonts/roboto/roboto-normal-latin.woff2)}")
 controls = 0
 for html in (

@@ -92,7 +92,7 @@ for path in ROOT.rglob("*.html"):
         assert page.h1 == 1 and page.main == 1, f"Missing/duplicate landmark in {path}"
         assert "site-nav" in page.ids, f"Missing site navigation in {path}"
         expected_navigation = {
-            "index.html": "/", "cv": "/", "publications": "/publications/",
+            "index.html": "/", "publications": "/publications/",
             "publication": "/publications/", "talks": "/talks/",
             "portfolio": "/portfolio/", "year-archive": "/year-archive/", "posts": "/year-archive/"
         }.get(path.relative_to(ROOT).parts[0])
@@ -124,7 +124,7 @@ for path, page in pages.items():
     if path.relative_to(ROOT).parts[0] == "portfolio":
         assert all(image.get("srcset") and image.get("sizes") for image in page.images), f"Project images must be responsive: {path}"
 
-for path in ("cv/index.html", "index.html", "publications/index.html"):
+for path in ("index.html", "publications/index.html"):
     text = (ROOT / path).read_text()
     for placeholder in ("This paper is about the number 1", "University of Testing", "Upcoming conferences"):
         assert placeholder not in text, f"Template/stale copy remains in {path}"
@@ -132,8 +132,15 @@ for path in ("cv/index.html", "index.html", "publications/index.html"):
 assert len(list((ROOT / "portfolio").glob("*/index.html"))) == 4, "Expected all four project pages"
 for project in (ROOT / "portfolio").glob("*/index.html"):
     assert 'class="article-meta"' not in project.read_text(), f"Undated project acquired a build date: {project}"
-for alias in ("resume.html", "resume/index.html", "about.html", "about/index.html", "notes/index.html"):
+for alias in ("cv/index.html", "resume.html", "resume/index.html", "about.html", "about/index.html", "notes/index.html"):
     assert pages[ROOT / alias].redirect, f"Missing historical redirect: {alias}"
+for alias in ("cv/index.html", "resume.html", "resume/index.html"):
+    text = (ROOT / alias).read_text()
+    assert '<link rel="canonical" href="https://rvalenciaaz.github.io/">' in text, f"Retired CV alias must target the homepage: {alias}"
+    assert '0; url=https://rvalenciaaz.github.io/"' in text, f"Retired CV alias must redirect to the homepage: {alias}"
+for path in ("sitemap/index.html", "sitemap.xml"):
+    text = (ROOT / path).read_text()
+    assert "/cv/" not in text and "/resume/" not in text, f"Retired CV page is still listed in {path}"
 assert not (ROOT / "posts/2026/06/math-1/index.html").exists(), "Removed theorem post is still published"
 for removed in ("posts/2015/08/roadmap-qm/index.html", "posts/2025/08/qm-1/index.html"):
     assert not (ROOT / removed).exists(), f"Removed blog post is still published: {removed}"
@@ -141,8 +148,7 @@ posts = list((ROOT / "posts").rglob("*.html"))
 assert not posts, "Hidden blog posts must not be published"
 for path in ("year-archive/index.html", "sitemap/index.html", "feed.xml", "sitemap.xml"):
     assert "/posts/2025/08/plancks-fortunate-guess/" not in (ROOT / path).read_text(), f"Hidden Planck post is listed in {path}"
-for page in ("index.html", "cv/index.html"):
-    assert "Ellison Institute of Technology" in (ROOT / page).read_text(), f"Outdated role in {page}"
+assert "Ellison Institute of Technology" in (ROOT / "index.html").read_text(), "Outdated role on the homepage"
 assert "@earlham.ac.uk" not in (ROOT / "index.html").read_text(), "Obsolete contact email remains"
 assert not (ROOT / "posts/2025/08/plancks-fortunate-guess/index.html").exists(), "Hidden Planck post is still published"
 assert len(list((ROOT / "publication").rglob("*.html"))) == 7, "Missing an updated publication or thesis"
