@@ -2,8 +2,7 @@
   {% if page.url == '/' %}
   <div class="profile-card">
     <picture class="profile-photo">
-      <source media="(max-width:650px)" srcset="{{ '/assets/images/profilepic-mobile.webp' | relative_url }}">
-      <img src="{{ '/assets/images/profilepic-desktop.webp' | relative_url }}" alt="Ricardo Valencia Albornoz" width="600" height="391" fetchpriority="high">
+      <img src="{{ '/assets/images/profilepic-portrait.webp' | relative_url }}" alt="Ricardo Valencia Albornoz" width="400" height="489" fetchpriority="high">
     </picture>
     <div class="profile-caption">
       <p class="profile-role">{{ site.author.role }}</p>

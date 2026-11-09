@@ -47,7 +47,7 @@ Every page, including historical aliases, receives the shared Content Security P
 | Hidden Planck draft | `_posts/2025-08-26-blog-post-4.md` |
 | Navigation | `_data/navigation.yml` |
 | Profile and site settings | `_config.yml` |
-| Profile photographs | `assets/images/profilepic-{desktop,mobile}.webp` |
+| Profile photograph | `assets/images/profilepic-portrait.webp` |
 | Shared layouts | `_layouts/` |
 | Design | `assets/css/site.css` |
 | Mobile menu | `assets/js/site.js` |
@@ -56,7 +56,7 @@ Projects use `image`, `topic` and a short `excerpt` in their front matter; their
 
 Existing publication, talk and project links are retained. The separate biography, research-background, empty Blog and unlinked HTML sitemap pages have been removed. Their old URLs redirect to the homepage with a `noindex` directive. The generated XML sitemap remains at `/sitemap.xml`.
 
-Unused AcademicPages templates, example content, generator notebooks, old downloads and unreferenced photographs have been removed. The homepage contains the research background, with the thesis listed under Publications. LinkedIn is the contact method. A native `<picture>` selects a 400×489 mobile portrait or a 600×391 desktop portrait. These crops preserve the original framing without downloading pixels hidden by CSS zoom; the uncropped `assets/images/profilepic.webp` remains the social-preview image. Project photographs also use WebP files in `assets/images/`.
+Unused AcademicPages templates, example content, generator notebooks, old downloads and unreferenced photographs have been removed. The homepage contains the research background, with the thesis listed under Publications. LinkedIn is the contact method. The 400×489 head-and-shoulders photograph uses a passport-style 7:9 frame: 140×180 pixels on desktop and smaller on mobile. Its narrower frame uses less area than the previous landscape photograph. Ordinary text is black; white text and link colors are preserved. The uncropped `assets/images/profilepic.webp` remains the social-preview image. Project photographs also use WebP files in `assets/images/`.
 
 Roboto is served locally from `assets/fonts/roboto/`, with its font declarations in `assets/css/site.css` to avoid a separate blocking stylesheet request. Its files omit unused light weights below 400 while preserving all Latin and extended-Latin characters and the site's 400–700 weights. The retained upper range preserves the original interpolation and rendering. The font license remains beside the files. Portraits and fonts are committed assets; GitHub Pages needs no image or font processing. KaTeX and its mathematical fonts are retained in `assets/vendor/katex/` for the hidden Planck draft and local checks. That directory and `assets/js/math.js` are excluded from the public build while no math content is published. No font or math CDN is needed at runtime.
 

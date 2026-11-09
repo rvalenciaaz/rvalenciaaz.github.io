@@ -42,7 +42,7 @@ class Page(HTMLParser):
             self.links.append(attrs["content"])
         if tag == "img":
             self.images.append(attrs)
-            self.portraits += urlsplit(attrs.get("src", "")).path.endswith("/assets/images/profilepic-desktop.webp")
+            self.portraits += urlsplit(attrs.get("src", "")).path.endswith("/assets/images/profilepic-portrait.webp")
             assert "alt" in attrs, f"Missing image alt in {self.path}"
             assert attrs.get("width") and attrs.get("height"), f"Image dimensions missing in {self.path}"
         if attrs.get("srcset"):
@@ -83,8 +83,7 @@ assert {path.name for path in (ROOT / "assets/css").iterdir()} == {"site.css"}, 
 assert {path.name for path in (ROOT / "assets/js").iterdir()} == {"site.js"}, "Unused scripts are still published"
 assert {path.name for path in (ROOT / "assets/fonts").iterdir()} == {"roboto"}, "Unused icon fonts are still published"
 assert (ROOT / "assets/images/profilepic.webp").stat().st_size < 150_000, "The small portrait exceeds 150 KB"
-for kind in ("desktop", "mobile"):
-    assert (ROOT / f"assets/images/profilepic-{kind}.webp").stat().st_size < 35_000, f"The {kind} portrait exceeds 35 KB"
+assert (ROOT / "assets/images/profilepic-portrait.webp").stat().st_size < 35_000, "The portrait exceeds 35 KB"
 assert (ROOT / "assets/fonts/roboto/roboto-normal-latin.woff2").stat().st_size < 40_000, "The main font exceeds 40 KB"
 
 pages = {}
