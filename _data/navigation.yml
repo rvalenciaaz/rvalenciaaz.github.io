@@ -11,6 +11,3 @@ main:
   - title: Portfolio
     url: /portfolio/
     section: projects
-  - title: Blog
-    url: /year-archive/
-    section: notes

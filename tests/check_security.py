@@ -176,7 +176,7 @@ for path in ROOT.rglob("*"):
     if relative.parts[0] == "assets":
         assert path.suffix in (".css", ".js", ".webp", ".woff2", ".woff", ".ttf", ".txt") or path.name == "LICENSE", f"Unexpected asset type: {relative}"
     else:
-        assert path.suffix == ".html" or str(relative) in ("feed.xml", "sitemap.xml", "robots.txt", "redirects.json"), f"Unexpected published file: {relative}"
+        assert path.suffix == ".html" or str(relative) in ("sitemap.xml", "robots.txt", "redirects.json"), f"Unexpected published file: {relative}"
     if path.suffix == ".html":
         try:
             page = SecurityPage(path.read_text())

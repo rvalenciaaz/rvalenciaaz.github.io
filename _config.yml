@@ -42,6 +42,8 @@ exclude:
   - bin
   - tests
   - previews
+  - assets/js/math.js
+  - assets/vendor/katex
 
 collections:
   publications:
@@ -81,6 +83,5 @@ defaults:
       section: projects
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from

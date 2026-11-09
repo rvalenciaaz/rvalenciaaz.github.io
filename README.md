@@ -28,7 +28,7 @@ npm run build
 npm run check
 ```
 
-The production command sets `JEKYLL_ENV=production` and generates the website in `_site/`. The check uses Python’s standard library to verify local links and anchors, responsive image sources, CSS font URLs, image descriptions and dimensions, page landmarks, current navigation, required content, and the removal of obsolete files. It also checks image loading priorities, keeps each displayed portrait below 35 KB and the main font below 40 KB, and validates the saved Planck draft’s LaTeX expressions using the vendored KaTeX renderer. `_site/`, local dependencies and preview screenshots are ignored by Git.
+The production command sets `JEKYLL_ENV=production` and generates the website in `_site/`. The check uses Python’s standard library to verify local links and anchors, responsive image sources, CSS font URLs, image descriptions and dimensions, page landmarks, current navigation, required content, and the removal of obsolete files. All content pages must be reachable from the homepage, and published assets must be referenced by HTML or CSS; the custom 404 page and required font license are exempt. PDFs and unused public files are rejected. The check also enforces image loading priorities, keeps each displayed portrait below 35 KB and the main font below 40 KB, and validates the saved Planck draft’s LaTeX expressions using the vendored KaTeX renderer. `_site/`, local dependencies and preview screenshots are ignored by Git.
 
 Desktop and mobile layouts were reviewed in Chrome. Browser checks covered the main pages, project details, the now-unpublished Planck blog post and profile/contact pages at desktop and mobile sizes, WCAG A/AA checks with axe, image loading, JavaScript errors and keyboard operation of the mobile menu. Display equations can be scrolled with the keyboard when they are wider than the screen. Additional layout checks cover widths from 320 to 1920 pixels, plus navigation with JavaScript disabled. Review screenshots are in the local `previews/` directory.
 
@@ -44,7 +44,7 @@ Every page, including historical aliases, receives the shared Content Security P
 | Publications | `_publications/` |
 | Projects | `_portfolio/` |
 | Talks | `_talks/` |
-| Notes | `_posts/` |
+| Hidden Planck draft | `_posts/2025-08-26-blog-post-4.md` |
 | Navigation | `_data/navigation.yml` |
 | Profile and site settings | `_config.yml` |
 | Profile photographs | `assets/images/profilepic-{desktop,mobile}.webp` |
@@ -52,15 +52,17 @@ Every page, including historical aliases, receives the shared Content Security P
 | Design | `assets/css/site.css` |
 | Mobile menu | `assets/js/site.js` |
 
-Projects use `image`, `topic` and a short `excerpt` in their front matter; their full description and photographs with descriptive `alt` text belong in the HTML body. Project photographs keep a 1400px original plus 640px and 1000px WebP variants. Native `srcset` and `sizes` select the appropriate file; the first card loads with high priority and later cards load lazily. The variants are committed static assets, so GitHub Pages needs no image-processing step. Blog posts use Markdown. Give each new item a unique permalink. Use `published: false` to keep drafts out of the generated site. The Planck post is saved as an unpublished draft in `_posts/2025-08-26-blog-post-4.md`. No blog posts are currently published.
+Projects use `image`, `topic` and a short `excerpt` in their front matter; their full description and photographs with descriptive `alt` text belong in the HTML body. Project photographs keep a 1400px original plus 640px and 1000px WebP variants. Native `srcset` and `sizes` select the appropriate file; the first card loads with high priority and later cards load lazily. The variants are committed static assets, so GitHub Pages needs no image-processing step. The Planck post remains an unpublished Markdown draft with `published: false` in `_posts/2025-08-26-blog-post-4.md`. No blog posts are currently published, so the empty Blog section and feed have been removed.
 
-Existing publication, talk and project links are retained. The Planck note reserves `/posts/2025/08/plancks-fortunate-guess/` for when it is published. The separate biography and research-background pages have been removed; `/about/`, `/about.html`, `/cv/`, `/resume` and `/resume/` redirect to the homepage. `/notes/` and the old writing archive alias redirect to the blog.
+Existing publication, talk and project links are retained. The separate biography, research-background, empty Blog and unlinked HTML sitemap pages have been removed. Their old URLs redirect to the homepage with a `noindex` directive. The generated XML sitemap remains at `/sitemap.xml`.
 
 Unused AcademicPages templates, example content, generator notebooks, old downloads and unreferenced photographs have been removed. The homepage contains the research background, with the thesis listed under Publications. LinkedIn is the contact method. A native `<picture>` selects a 400×489 mobile portrait or a 600×391 desktop portrait. These crops preserve the original framing without downloading pixels hidden by CSS zoom; the uncropped `assets/images/profilepic.webp` remains the social-preview image. Project photographs also use WebP files in `assets/images/`.
 
-Roboto is served locally from `assets/fonts/roboto/`, with its font declarations in `assets/css/site.css` to avoid a separate blocking stylesheet request. Its files omit unused light weights below 400 while preserving all Latin and extended-Latin characters and the site's 400–700 weights. The retained upper range preserves the original interpolation and rendering. The font license remains beside the files. Portraits and fonts are committed assets; GitHub Pages needs no image or font processing. KaTeX and its mathematical fonts are served locally from `assets/vendor/katex/` only on math-enabled posts. No font or math CDN is needed at runtime.
+Roboto is served locally from `assets/fonts/roboto/`, with its font declarations in `assets/css/site.css` to avoid a separate blocking stylesheet request. Its files omit unused light weights below 400 while preserving all Latin and extended-Latin characters and the site's 400–700 weights. The retained upper range preserves the original interpolation and rendering. The font license remains beside the files. Portraits and fonts are committed assets; GitHub Pages needs no image or font processing. KaTeX and its mathematical fonts are retained in `assets/vendor/katex/` for the hidden Planck draft and local checks. That directory and `assets/js/math.js` are excluded from the public build while no math content is published. No font or math CDN is needed at runtime.
 
 ## LaTeX equations
+
+The hidden Planck draft and all its math support are preserved. To publish it later, remove its `published: false` flag and the two math-asset exclusions in `_config.yml`, then update the publication checks to allow its route and linked assets.
 
 Add `math: true` to a post’s front matter. The local KaTeX scripts render conventional LaTeX delimiters. To preserve backslashes through Markdown processing, use:
 
